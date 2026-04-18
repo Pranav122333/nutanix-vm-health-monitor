@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<title>Nutanix VM Health Report</title>
+<style>
+  body { font-family: Arial, sans-serif; margin: 32px; }
+  h1 { color: #1e2c5e; } h3 { color: #555; }
+  .summary { display:flex; gap:24px; margin:16px 0 24px; }
+  .card { padding:12px 24px; border-radius:8px; font-size:18px; font-weight:bold; }
+  .green { background:#d4edda; color:#155724; }
+  .yellow { background:#fff3cd; color:#856404; }
+  .gray  { background:#e2e3e5; color:#383d41; }
+  table { border-collapse:collapse; width:100%; }
+  th { background:#1e2c5e; color:#fff; padding:10px 14px; text-align:left; }
+  td { padding:9px 14px; border-bottom:1px solid #dee2e6; }
+</style></head>
+<body>
+  <h1>Nutanix VM Health Report</h1>
+  <h3>Cluster: demo-cluster &nbsp;|&nbsp; Generated: 2026-04-18 09:32:25</h3>
+  <div class="summary">
+    <div class="card green">✔ 3 Healthy</div>
+    <div class="card yellow">⚠ 1 Warning / Critical</div>
+    <div class="card gray">○ 1 Off</div>
+  </div>
+  <table>
+    <tr><th>VM Name</th><th>Power</th><th>CPU %</th><th>Memory %</th><th>IP</th><th>Status</th></tr>
+    
+        <tr style="background:#d4edda">
+          <td>web-prod-01</td>
+          <td>ON</td>
+          <td>72%</td>
+          <td>61%</td>
+          <td>10.0.1.10</td>
+          <td><b>HEALTHY</b></td>
+        </tr>
+        <tr style="background:#d4edda">
+          <td>app-staging-01</td>
+          <td>ON</td>
+          <td>34%</td>
+          <td>45%</td>
+          <td>10.0.1.12</td>
+          <td><b>HEALTHY</b></td>
+        </tr>
+        <tr style="background:#d4edda">
+          <td>monitor-01</td>
+          <td>ON</td>
+          <td>12%</td>
+          <td>28%</td>
+          <td>10.0.1.14</td>
+          <td><b>HEALTHY</b></td>
+        </tr>
+        <tr style="background:#e2e3e5">
+          <td>backup-agent</td>
+          <td>OFF</td>
+          <td>0%</td>
+          <td>0%</td>
+          <td>N/A</td>
+          <td><b>OFF</b></td>
+        </tr>
+        <tr style="background:#fff3cd">
+          <td>db-prod-01</td>
+          <td>ON</td>
+          <td>88%</td>
+          <td>91%</td>
+          <td>10.0.1.11</td>
+          <td><b>WARNING</b></td>
+        </tr>
+  </table>
+  <p style="color:#888;font-size:13px;margin-top:24px">
+    CPU threshold: 80% &nbsp;|&nbsp; Memory threshold: 85%
+  </p>
+</body></html>
