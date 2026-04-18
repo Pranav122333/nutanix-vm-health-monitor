@@ -6,6 +6,12 @@ Built as a practical CloudOps automation project aligned with Nutanix iResident/
 
 ---
 
+## Demo Output
+
+![Demo Screenshot](screenshot.png)
+
+---
+
 ## Features
 
 - Connects to Nutanix Prism via REST API v3 (authenticated, HTTPS)
